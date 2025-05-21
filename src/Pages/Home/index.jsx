@@ -4,58 +4,42 @@ import { Link } from 'react-router-dom';
 import '../../App.css';
 
 const Home = () => {
+  // Add state to track the current slide
+  const [currentSlide, setCurrentSlide] = React.useState(1);
+
+  // Function to handle slide change
+  const handleSlideChange = (slideNum) => {
+    setCurrentSlide(slideNum);
+    // Optionally, you can add logic to scroll or animate to the selected slide
+  };
+
   return (
     <>
-      
       {/* Main Content */}
       <main>
         {/* Hero Slider */}
         <section className="slider">
           <div className="slides">
-            <div className="slide">
-              <Link to="/novos-cursos">
-                <img src="/imagens/slider/10.png" alt="Novos Cursos" />
-              </Link>
-            </div>
-            {/* Add other slides here */}
-          </div>
-          
-          <div className="slide-controls">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div key={i} className={`slide-btn ${i === 1 ? 'active' : ''}`}></div>
+            {[1, 2, 3, 4, 5, 6, 7].map((slideNum) => (
+              <div key={slideNum} className="slide" style={{ display: slideNum === currentSlide ? 'block' : 'none' }}>
+                <Link to="/novos-cursos">
+                  <img
+                    src={`/imagens/slider/${slideNum}.png`}
+                    alt={`Slide ${slideNum}`}
+                    style={{ width: '100%' }}
+                  />
+                </Link>
+              </div>
             ))}
           </div>
-        </section>
-
-        {/* Highlights Section */}
-        <section className="section">
-          <div className="container">
-            <h2 className="section-title">Destaques</h2>
-            <div className="grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
-              <div className="card">
-                <div className="card-body">
-                  <Link to="/novos-cursos" className="clicavel-destaque">
-                    <h4>Intenção de matrícula cursos 2025/02</h4>
-                  </Link>
-                </div>
-              </div>
-              
-              <div className="card">
-                <div className="card-body">
-                  <Link to="/pronatec" className="clicavel-destaque">
-                    <h4>Eleições Grêmio Estudantil 2025</h4>
-                  </Link>
-                </div>
-              </div>
-              
-              <div className="card">
-                <div className="card-body">
-                  <Link to="/feira-ciencias" className="clicavel-destaque">
-                    <h4>IV Feira de Ciência e Tecnologia e Mostra de Trabalhos</h4>
-                  </Link>
-                </div>
-              </div>
-            </div>
+          <div className="slide-controls">
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+              <div
+                key={i}
+                className={`slide-btn ${i === currentSlide ? 'active' : ''}`}
+                onClick={() => handleSlideChange(i)}
+              ></div>
+            ))}
           </div>
         </section>
 

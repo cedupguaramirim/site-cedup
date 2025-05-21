@@ -498,6 +498,233 @@ p {
   border-radius: 50%;
   background: rgba(71, 172, 224, 0.1);
   z-index: -1;
+
+  
+}
+
+/* Estilos específicos para a página Sobre */
+.menu_sobre {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  justify-content: center;
+}
+
+.menu_sobre .submenu {
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-xl);
+  transition: var(--transition-normal);
+}
+
+.menu_sobre .submenu:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.historia-container {
+  background: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.historia-subtitulo {
+  color: var(--color-primary);
+  margin: var(--space-lg) 0 var(--space-md);
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.historia-subtitulo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+}
+
+.historia-content {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  align-items: flex-start;
+}
+
+.historia-imagem {
+  flex: 0 0 300px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.historia-imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition-normal);
+}
+
+.historia-imagem:hover img {
+  transform: scale(1.03);
+}
+
+.historia-texto {
+  flex: 1;
+}
+
+.historia-texto p {
+  margin-bottom: var(--space-md);
+}
+
+.content__p {
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .historia-content {
+    flex-direction: column;
+  }
+  
+  .historia-imagem {
+    flex: 1 1 100%;
+    margin-bottom: var(--space-md);
+  }
+  
+  .menu_sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Slider Styles - */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1275px; /* Limita a largura máxima */
+  height: 0;
+  padding-bottom: 40%; /* Proporção 16:10  */
+  overflow: hidden;
+  margin: var(--space-xl) auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantém a proporção sem cortar */
+  object-position: center;
+  background-color: var(--color-background); /* Cor de fundo se a imagem for menor */
+}
+
+/* Controles do slider (mantido igual) */
+.slide-controls {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-sm);
+  z-index: 10;
+}
+
+.slide-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.slide-btn.active {
+  background-color: var(--color-white);
+  transform: scale(1.2);
+}
+
+.slide-btn:hover {
+  background-color: var(--color-white);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .slider {
+    padding-bottom: 50%; /* Proporção mais alta em telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    padding-bottom: 60%;
+    margin: var(--space-lg) auto;
+    border-radius: var(--radius-md);
+  }
+  
+  .slide-btn {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    padding-bottom: 70%;
+  }
+  
+  .slide-controls {
+    bottom: var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    height: 350px;
+  }
+  
+  .slide-btn {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    height: 250px;
+    margin: var(--space-lg) 0;
+  }
+  
+  .slide-controls {
+    bottom: var(--space-md);
+  }
 }
 
 /* Responsive Styles */
