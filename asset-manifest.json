@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cedupguaramirim/site-cedup.git/static/css/main.178964c7.css",
+    "main.js": "/cedupguaramirim/site-cedup.git/static/js/main.0778f454.js",
+    "static/media/logo_cedup.png": "/cedupguaramirim/site-cedup.git/static/media/logo_cedup.610df62bfbfcbd3096e7.png",
+    "index.html": "/cedupguaramirim/site-cedup.git/index.html",
+    "main.178964c7.css.map": "/cedupguaramirim/site-cedup.git/static/css/main.178964c7.css.map",
+    "main.0778f454.js.map": "/cedupguaramirim/site-cedup.git/static/js/main.0778f454.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.178964c7.css",
+    "static/js/main.0778f454.js"
+  ]
+}
