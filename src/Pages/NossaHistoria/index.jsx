@@ -1,0 +1,62 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+
+const Sobre = () => {
+  return (
+    <div className="site">
+      
+      <div className="site-content container">
+        <h2 className="cursos-titulo">SOBRE O CEDUP</h2>
+        <div className="menu_sobre">
+          <Link className="submenu" to="/quemsomos">Quem Somos</Link>
+          <Link className="submenu" to="/nossahistoria">Nossa História</Link>
+        </div>
+          
+        <h2 className="título-nossahistoria">Nossa história</h2>
+        
+        <article>
+          <p className="content__p">
+            O CEDUP "Perfeito Manoel de Aguiar" iniciou suas atividades no 1º Semestre de 2021, buscando proporcionar o desenvolvimento integral do estudante, respeitando valores éticos, morais e culturais, tornando-o conhecedor de sua realidade, crítico, responsável, competente, democrático, criativo e capaz de transformar a sociedade a partir do seu protagonismo.
+            <br /><br />
+          </p>
+                
+          <h3 className="título-nossahistoria"><strong>Missão</strong><br /></h3>
+          <p className="content__p">
+            Assegurar um ensino de qualidade, garantindo o acesso, inclusão e a permanência dos alunos, formando cidadãos críticos e participantes, capazes de agir na transformação da sociedade.
+          </p>
+
+          <br /><br />
+
+          <h3 className="título-nossahistoria"><strong>Filosofia</strong> <br /></h3>
+          <p className="content__p">
+            <q>Preparar o educando para o exercício da cidadania e para o mundo do trabalho, resgatando valores éticos, morais e culturais.</q>
+          </p>
+
+          <br /><br /> 
+          <br /><br />
+                               
+          <h3 className="título-nossahistoria"><strong>Quem é Perfeito Manoel de Aguiar?</strong><br /></h3>
+          <br /><br />
+                
+          <div className="content__p">
+            <img 
+              className="img__historia"
+              src="/imagens/historia/perfeito_manoel.png" 
+              alt="Fotografia em preto e branco, que contém um homem branco com cabelos grisalhos em frente a uma cortina vestindo um paletó de cor clara por cima de uma camisa social escura com botões." 
+            />
+            Nascido em 12 de dezembro de 1892, em Itajaí/SC, sempre exerceu a função de lavrador. Quando tinha 20 anos de idade veio residir no Distrito de Bananal, hoje município de Guaramirim, na localidade do Bairro Avaí, onde aos 28 anos casou-se com Deartina Bernadina da Rocha, com a qual teve 13 filhos.
+            <br /><br />
+            Pessoa de boa índole, Perfeito Manoel de Aguiar, educou com muita austeridade seus filhos. Sempre cobrou deles muita honestidade em tudo o que fizessem. Pessoa religiosa esteve sempre envolvido com a igreja, fazendo parte dos turmeiros na construção da Igreja Matriz e da Capela Santos Anjos no Bairro Avaí. Já com idade avançada incentivou seus filhos a doarem uma área de terra para a construção de uma escola, pois a única existente ficava a 4 km de distância do bairro.
+            <br /><br />
+            A doação foi feita pelo seu filho Manoel Perfeito de Aguiar onde então foi criada a EEB Alfredo Zimmermann. Por sempre ter se envolvido com os problemas de sua comunidade, talvez tenha sido este o motivo de fazer dois de seus filhos caminharem na vida pública. Aurino Prefeito de Aguiar foi prefeito por dois mandatos no município de Rio das Antas/SC. José Perfeito de Aguiar, vereador, depois vice-prefeito e por último prefeito de Guaramirim por seis anos.
+            <br /><br />
+            Durante o seu mandato foi adquirido uma área de terra às margens da rodovia BR 280, onde se construiu o Parque Municipal de Eventos "Perfeito Manoel de Aguiar", que atendeu por muitos anos a comunidade de Guaramirim e aonde eram realizados de 02 em 02 anos a Feira Agroindustrial de Guaramirim. Terreno este onde agora se construiu o Centro de Educação Profissional. Os frutos de "Perfeito Manoel de Aguiar" continuam a serem colhidos no município de Guaramirim, visto que seus descendentes, netos e bisnetos, trabalharam e trabalham na educação dos cidadãos guaramirenses.
+          </div>
+        </article>
+      </div>
+    </div>
+  );
+};
+
+export default Sobre;
