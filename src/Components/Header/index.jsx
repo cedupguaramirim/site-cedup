@@ -13,7 +13,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <nav className="navbar">
-          <Link to="/" className="logo">CEDUP Guaramirim</Link>
+          <Link to="/" className="logo"></Link>
           
           <ul className="nav-menu">
             <li className="nav-item">
@@ -49,7 +49,7 @@ const Header = () => {
           </ul>
           
           <div className="menu-toggle" onClick={toggleMenu}>
-            <span className="material-symbols-outlined">menu</span>
+            <span className="material-symbols-outlined"></span>
           </div>
         </nav>
       </div>

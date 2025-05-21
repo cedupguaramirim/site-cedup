@@ -181,6 +181,7 @@ p {
   z-index: 1000;
   padding: var(--space-sm) 0;
   border-bottom: 3px solid var(--color-secondary-lighter);
+  overflow: hidden;
 }
 
 .navbar {
@@ -197,11 +198,28 @@ p {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
+  height: 60px;
+  overflow: visible;
+  position: relative;
 }
 
 .logo::before {
-  content: "✏️";
-  font-size: 1.5rem;
+  content: "";
+  display: inline-block;
+  width: 230px;
+  height: 230px;
+  background-image: url("/public/imagens/logo_cedup.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: var(--space-xs);
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .nav-menu {
